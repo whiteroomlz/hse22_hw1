@@ -29,10 +29,10 @@ ls sub* mps* | xargs -tI{} fastqc -o \hw1-fastqc-results {}
 multiqc -o \hw1-multiqc-results \hw1-fastqc-results
 ```
 Результаты для неподрезанных чтений:
-```
+
 ![image1](https://github.com/whiteroomlz/hse22_hw1/blob/images/non-trimmed-general-report.png)
 ![image2](https://github.com/whiteroomlz/hse22_hw1/blob/images/non-trimmed-sequence-quality-scores.png)
-```
+
 Подрезаем чтения:
 ```
 platanus_trim sub*
@@ -58,7 +58,6 @@ ls sub* mps*| xargs -tI{} fastqc -o \hw1-fastqc-trimmed-results {}
 multiqc -o \hw1-multiqc-trimmed-results \hw1-fastqc-trimmed-results
 ```
 Результаты для подрезанных чтений:
-```
+
 ![image3](https://github.com/whiteroomlz/hse22_hw1/blob/images/trimmed-general-report.png)
 ![image4](https://github.com/whiteroomlz/hse22_hw1/blob/images/trimmed-sequence-quality-scores.png)
-```
