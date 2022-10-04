@@ -29,9 +29,8 @@ ls sub* mps* | xargs -tI{} fastqc -o \hw1-fastqc-results {}
 multiqc -o \hw1-multiqc-results \hw1-fastqc-results
 ```
 Результаты для неподрезанных чтений:
-
-![image1](https://github.com/whiteroomlz/hse22_hw1/blob/images/non-trimmed-general-report.png)
-![image2](https://github.com/whiteroomlz/hse22_hw1/blob/images/non-trimmed-sequence-quality-scores.png)
+![image1](https://github.com/whiteroomlz/hse22_hw1/blob/826bb0f0605c3b3114ad058027627bc64f3d1cd7/images/non-trimmed-general-report.png)
+![image2](https://github.com/whiteroomlz/hse22_hw1/blob/826bb0f0605c3b3114ad058027627bc64f3d1cd7/images/non-trimmed-sequence-quality-scores.png)
 
 Подрезаем чтения:
 ```
@@ -59,5 +58,5 @@ multiqc -o \hw1-multiqc-trimmed-results \hw1-fastqc-trimmed-results
 ```
 Результаты для подрезанных чтений:
 
-![image3](https://github.com/whiteroomlz/hse22_hw1/blob/images/trimmed-general-report.png)
-![image4](https://github.com/whiteroomlz/hse22_hw1/blob/images/trimmed-sequence-quality-scores.png)
+![image3](https://github.com/whiteroomlz/hse22_hw1/blob/826bb0f0605c3b3114ad058027627bc64f3d1cd7/images/trimmed-general-report.png)
+![image4](https://github.com/whiteroomlz/hse22_hw1/blob/826bb0f0605c3b3114ad058027627bc64f3d1cd7/images/trimmed-sequence-quality-scores.png)
