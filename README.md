@@ -1,20 +1,20 @@
 # hse22_hw1
 # Обязательная часть
-*Создание ссылок*
+## Создание ссылок
 ```
 ln -s /usr/share/data-minor-bioinf/assembly/oil_R1.fastq
 ln -s /usr/share/data-minor-bioinf/assembly/oil_R2.fastq
 ln -s /usr/share/data-minor-bioinf/assembly/oilMP_S4_L001_R1_001.fastq
 ln -s /usr/share/data-minor-bioinf/assembly/oilMP_S4_L001_R2_001.fastq
 ```
-*Выбор случайных чтений:*
+## Выбор случайных чтений
 ```
 seqtk sample -s116 oil_R1.fastq 5000000 > sub1.fastq
 seqtk sample -s116 oil_R2.fastq 5000000 > sub2.fastq
 seqtk sample -s116 oilMP_S4_L001_R1_001.fastq 1500000 > mps1.fastq
 seqtk sample -s116 oilMP_S4_L001_R2_001.fastq 1500000 > mps2.fastq
 ```
-*Оценка качества и статистика по исходным чтениям*
+## Оценка качества и статистика по исходным чтениям
 Создаём папки с результатами работы fastQC и multiQC:  
 ```
 mkdir hw1-fastqc-results && mkdir hw1-multiqc-results
