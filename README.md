@@ -75,6 +75,8 @@ time platanus scaffold -o Poil -c Poil_contig.fa -IP1 sub1.fastq.trimmed sub2.fa
 ```
 time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 sub1.fastq.trimmed sub2.fastq.trimmed -OP2 mps1.fastq.int_trimmed mps2.fastq.int_trimmed 2> gapclose.log
 ```
+Все результаты основной части по контигам и скаффолдам доступны по ссылке на блокнот Google Collab:
+https://colab.research.google.com/drive/1Iid_pEq7sm3mQu4fIr-iGaPL-jPPaJO_?usp=sharing
 ## Заключительный этап
 Удаляем подрезанные чтения:
 ```
