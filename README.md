@@ -75,3 +75,13 @@ time platanus scaffold -o Poil -c Poil_contig.fa -IP1 sub1.fastq.trimmed sub2.fa
 ```
 time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 sub1.fastq.trimmed sub2.fastq.trimmed -OP2 mps1.fastq.int_trimmed mps2.fastq.int_trimmed 2> gapclose.log
 ```
+## Заключительный этап
+Удаляем подрезанные чтения:
+```
+rm mps* && rm sub*
+```
+Эстетичности и порядка ради переносим всё в директорию hw1:
+```
+mkdir hw1
+mv *.log hw1/ && mv hw1-* hw1/ && mv oil* hw1/ && mv Poil* hw1/
+```
