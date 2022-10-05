@@ -61,3 +61,17 @@ multiqc -o \hw1-multiqc-trimmed-results \hw1-fastqc-trimmed-results
 
 ![image3](https://github.com/whiteroomlz/hse22_hw1/blob/826bb0f0605c3b3114ad058027627bc64f3d1cd7/images/trimmed-general-report.png)
 ![image4](https://github.com/whiteroomlz/hse22_hw1/blob/826bb0f0605c3b3114ad058027627bc64f3d1cd7/images/trimmed-sequence-quality-scores.png)
+
+## Контиги и скаффолды
+Собираем контиги с помощью platanus assemble:
+```
+time platanus assemble -o Poil -f sub1.fastq.trimmed sub2.fastq.trimmed 2> assemble.log
+```
+По контигам и подрезанным чтениям собираем через platanus scaffold:
+```
+time platanus scaffold -o Poil -c Poil_contig.fa -IP1 sub1.fastq.trimmed sub2.fastq.trimmed -OP2 mps1.fastq.int_trimmed mps2.fastq.int_trimmed 2> scaffold.log
+```
+Затем уменьшаем количество гэпов на основе подрезанных чтений с помощью platanus gap_close:
+```
+time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 sub1.fastq.trimmed sub2.fastq.trimmed -OP2 mps1.fastq.int_trimmed mps2.fastq.int_trimmed 2> gapclose.log
+```
